@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美颜补光灯</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐱 美颜补光灯 ✨</h1>
+        </header>
+        
+        <main>
+            <div class="camera-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <div class="controls">
+                <div class="control-section">
+                    <h2>背景设置</h2>
+                    <div class="color-options">
+                        <button class="color-btn" style="background-color: #FFD1DC;" data-color="#FFD1DC"></button>
+                        <button class="color-btn" style="background-color: #FFECB3;" data-color="#FFECB3"></button>
+                        <button class="color-btn" style="background-color: #E1BEE7;" data-color="#E1BEE7"></button>
+                        <button class="color-btn" style="background-color: #B2EBF2;" data-color="#B2EBF2"></button>
+                        <button class="color-btn" style="background-color: #C8E6C9;" data-color="#C8E6C9"></button>
+                        <button class="color-btn" style="background-color: #FFFFFF;" data-color="#FFFFFF"></button>
+                    </div>
+                </div>
+                
+                <div class="control-section">
+                    <h2>滤镜设置</h2>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="normal">原始</button>
+                        <button class="filter-btn" data-filter="warm">暖色</button>
+                        <button class="filter-btn" data-filter="cool">冷色</button>
+                        <button class="filter-btn" data-filter="vintage">复古</button>
+                        <button class="filter-btn" data-filter="dreamy">梦幻</button>
+                        <button class="filter-btn" data-filter="sweet">甜美</button>
+                        <button class="filter-btn" data-filter="fresh">清新</button>
+                        <button class="filter-btn" data-filter="elegant">优雅</button>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <div class="slider-group">
+                            <label for="brightness">亮度</label>
+                            <div class="slider-with-input">
+                                <input type="range" id="brightness" min="0" max="200" value="100">
+                                <input type="number" id="brightness-value" min="0" max="200" value="100">
+                            </div>
+                        </div>
+                        <div class="slider-group">
+                            <label for="saturation">饱和度</label>
+                            <div class="slider-with-input">
+                                <input type="range" id="saturation" min="0" max="200" value="100">
+                                <input type="number" id="saturation-value" min="0" max="200" value="100">
+                            </div>
+                        </div>
+                        <div class="slider-group">
+                            <label for="hue">色相</label>
+                            <div class="slider-with-input">
+                                <input type="range" id="hue" min="0" max="360" value="0">
+                                <input type="number" id="hue-value" min="0" max="360" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="control-section">
+                    <h2>美颜设置</h2>
+                    <div class="slider-controls">
+                        <div class="slider-group">
+                            <label for="smoothness">肤质光滑度</label>
+                            <div class="slider-with-input">
+                                <input type="range" id="smoothness" min="0" max="100" value="30">
+                                <input type="number" id="smoothness-value" min="0" max="100" value="30">
+                            </div>
+                        </div>
+                        <div class="slider-group">
+                            <label for="whitening">美白程度</label>
+                            <div class="slider-with-input">
+                                <input type="range" id="whitening" min="0" max="100" value="20">
+                                <input type="number" id="whitening-value" min="0" max="100" value="20">
+                            </div>
+                        </div>
+                        <div class="slider-group">
+                            <label for="slimface">瘦脸程度</label>
+                            <div class="slider-with-input">
+                                <input type="range" id="slimface" min="0" max="100" value="0">
+                                <input type="number" id="slimface-value" min="0" max="100" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="control-section">
+                    <h2>贴纸特效</h2>
+                    <div class="stickers-container">
+                        <button class="sticker-btn" data-sticker="none">无</button>
+                        <button class="sticker-btn" data-sticker="cat-ears">猫耳朵</button>
+                        <button class="sticker-btn" data-sticker="flower-crown">花环</button>
+                        <button class="sticker-btn" data-sticker="glasses">眼镜</button>
+                        <button class="sticker-btn" data-sticker="butterfly">蝴蝶</button>
+                        <button class="sticker-btn" data-sticker="stars">星星</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="capture-btn" class="action-btn">
+                    <span class="icon">📸</span> 拍照保存
+                </button>
+                <button id="share-btn" class="action-btn">
+                    <span class="icon">🔗</span> 分享
+                </button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>小猫补光灯 - 让你的美丽更闪耀 ✨</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
